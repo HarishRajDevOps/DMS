@@ -1,32 +1,32 @@
-import cx from 'classnames';
-import styles from '../styles/Signin.module.css'
+import styles from '../styles/Signin.module.scss'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Link from 'next/link';
 
-export default function Signin() {
-  return (
-    <>
+const signin= () => {
 
-      <main className={cx(styles["form-signin"],"text-center","mt-5")}>
-        <form>
-          <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
-
-          <div className="form-floating">
-            <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
-            <label htmlFor="floatingInput">Email address</label>
-          </div>
-          <div className="form-floating">
-            <input type="password" className="form-control" id="floatingPassword" placeholder="Password" />
-            <label htmlFor="floatingPassword">Password</label>
-          </div>
-
-          <div className={cx(styles.checkbox,"mb-3")}>
-            <label>
-              <input type="checkbox" value="remember-me" /> Remember me
-            </label>
-          </div>
-          <button className="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-        </form>
-      </main>
-
-    </>
-  )
+    return (
+        <div className="">
+            <div className={`${styles.paddingForRegister} text-center`}>
+                <h3>Please sign in</h3>
+                            <form method='post'>
+                               <div className="form-floating">
+                                  <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
+                                  <label htmlFor="floatingInput">Email address</label>
+                               </div>
+                                <div className="form-floating">
+                                  <input type="password" className="form-control" id="floatingPassword" placeholder="Password" />
+                                  <label htmlFor="floatingPassword">Password</label>
+                                </div>
+                                <div className={styles.paddingForRegister}>
+                                    <button className={`btn btn-success ${styles.login}`} type='submit'>Login</button>
+                                </div>
+                            </form>
+                        <div className={styles.paddingForRegister}>
+                            <p>Create a new account<Link href="/">Signup</Link></p>
+                        </div>
+            </div>
+        </div>
+    )
 }
+
+export default signin
