@@ -1,9 +1,7 @@
 import cx from 'classnames';
 import styles from '../styles/Signin.module.css'
 
-export default Signin;
-
-function Signin() {
+export default function Signin() {
   return (
     <>
 
