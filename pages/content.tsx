@@ -63,8 +63,6 @@ export default function content() {
 
       <footer className={styles.footer}>
           Powered by Gove
-          <span className={styles.logo}>
-          </span>
       </footer>
     </div>
   )

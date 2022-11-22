@@ -2,6 +2,7 @@ import styles from '../styles/Signin.module.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Link from 'next/link';
 
+
 const signin= () => {
 
     return (
@@ -25,6 +26,9 @@ const signin= () => {
                             <p>Create a new account<Link href="/">Signup</Link></p>
                         </div>
             </div>
+              <footer className={`${styles.footer} text-center`}>
+                 Powered by Gove
+              </footer>
         </div>
     )
 }
